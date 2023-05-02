@@ -9,6 +9,8 @@ except:
 def menu():
 	try:
 		os.system('clear')
+print("checking for update")
+os.system("git pull")
 		token=input("\x1b[7;91mVotre Token\033[0m=>\033[92m")
 		res=requests.get("https://graph.facebook.com/me?access_token="+token)
 		rp=json.loads(res.text)
